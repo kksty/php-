@@ -1,7 +1,11 @@
+
 <?php
+session_start();
 
-include_once('./function.php');
+$string = "your_value";  // 给要存储的值进行赋值
 
-$sql = 'SELECT * FROM member';
+$_SESSION['string'] = $string;  // 存储值到会话
 
-// var_dump(Query($sql));
+echo "session: " . $_SESSION['string'];  // 输出会话值
+
+?>

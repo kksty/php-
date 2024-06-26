@@ -7,7 +7,6 @@ $a = !empty($_GET['a']) ? $_GET['a'] : 'index';
 $b = !empty($_GET['b']) ? $_GET['b'] : 'index';
 $c = !empty($_GET['c']) ? $_GET['c'] : 'index';
 $t = !empty($_GET['t']) ? $_GET['t'] : 'index';
-
 $f = $_SERVER['REQUEST_METHOD'];
 
 
@@ -47,6 +46,11 @@ switch ($a) {
                 break;
             case 'contact':
                 require_once('./html/contact.html');
+                break;
+            case 'login':
+                require_once('./html/login.html');
+                break;
+            case 'loginSuccess':
                 break;
             default:
                 # code...
